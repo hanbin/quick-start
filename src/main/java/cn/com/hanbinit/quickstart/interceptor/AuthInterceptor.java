@@ -1,6 +1,8 @@
 package cn.com.hanbinit.quickstart.interceptor;
 
+import cn.com.hanbinit.quickstart.exception.ApplicationException;
 import cn.com.hanbinit.quickstart.service.AuthService;
+import javafx.application.Application;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
@@ -26,7 +28,12 @@ public class AuthInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String authorization = request.getHeader("Authorization");
         log.info(authorization);
-        return authService.validate(authorization);
+        Boolean isPass = authService.validate(authorization);
+        if(isPass){
+            return isPass;
+        }else{
+            throw new ApplicationException("无权限");
+        }
     }
 
     @Override
