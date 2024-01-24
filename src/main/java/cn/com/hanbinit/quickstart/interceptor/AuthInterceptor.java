@@ -2,16 +2,14 @@ package cn.com.hanbinit.quickstart.interceptor;
 
 import cn.com.hanbinit.quickstart.exception.ApplicationException;
 import cn.com.hanbinit.quickstart.service.AuthService;
-import javafx.application.Application;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * 权限拦截器

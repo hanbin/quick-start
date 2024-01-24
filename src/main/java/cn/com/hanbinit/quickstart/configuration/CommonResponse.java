@@ -1,8 +1,7 @@
 package cn.com.hanbinit.quickstart.configuration;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,16 +11,16 @@ import lombok.Setter;
  * @Description TODO
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@ApiModel("公共返回类")
+@Schema(description = "公共返回类")
 @Setter
 @Getter
 public class CommonResponse<T> {
 
-    @ApiModelProperty("接口状态码")
+    @Schema(description = "接口状态码")
     private String code;
-    @ApiModelProperty("接口返回描述")
+    @Schema(description = "接口返回描述")
     private String message;
-    @ApiModelProperty("接口返回数据，一般为JSON格式")
+    @Schema(description = "接口返回数据，一般为JSON格式")
     private T data;
 
     public CommonResponse(){
