@@ -5,7 +5,7 @@
 ## 一句话描述
 
 这个工程没有提供太多的东西。
-一个基于Spring Boot 2.4.2的纯净Spring Boot项目，依赖了`spring-boot-starter-web`和`Lombok`以及`Swagger`。
+一个基于~~Spring Boot 2.4.2~~ Spring Boot 3.2.2 的纯净Spring Boot项目，依赖了`spring-boot-starter-web`和`Lombok`以及`Swagger`。
 
 ## 功能介绍
 
@@ -21,7 +21,5 @@
 -  Swagger访问地址： http://localhost:8888/doc.html
 
 - Swagger接口访问截图：
-  
-![错误token](https://oss.hanbinit.com.cn/img/image-20210209002135806.png)
 
-![token正确，接口正常返回](https://oss.hanbinit.com.cn/img/image-20210209002225107.png)
+![swagger截图](./src/main/resources/img/1.png)
