@@ -15,6 +15,7 @@
 - 提供了`CustomApplicationReadyEvent`和`PrintSomethingBean` ，分别实现了`ApplicationListener<ApplicationReadyEvent>`和`CommandLineRunner`，参考这两个类可以在项目启动过程中做一些初始化动作和日志打印。
 - 提供了全局异常拦截，封装了自定义异常`ApplicationException`, 建议在主动抛异常时使用这个。
 - 提供了全局异常处理。
+- 引入Spring Data JPA，提供使用示例。
 
 ## 访问截图
 
